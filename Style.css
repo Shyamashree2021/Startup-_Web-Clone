@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,300&display=swap');
+body{
+    font-family: 'Poppins',sans-serif;
+    background: white;
+
+}
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    background: white;
+
+}
+nav img{
+    width: 160px;
+    position: absolute;
+    top:17px;
+    left:12%;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 15px;
+}
+nav ul li a{
+    position: relative;
+    color: gray;
+    font-size: 16px;
+    padding: 5px 0;
+}
+nav ul li a::before{
+    position: absolute;
+    content:'';
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #cancel{
+    color:white;
+    font-size: 30px;
+    float:right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media(max-width:1118px){
+    nav img{
+        left:8%;
+    }
+}
+@media(max-width:994px){
+    nav img{
+        left:6%;
+        top:20px;
+        width: 130px;
+    }
+    nav ul li a{
+        font-size: 13px;
+    }
+}
+@media(max-width:860px){
+    lebel #btn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height:100vh;
+        background:grey;
+        top:80px;
+        left:-100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin:50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+    #check:checked ~ ul{
+        left:0;
+
+    }
+    #check:checked ~ lebel #btn{
+        display: none;
+    }
+    #check:checked ~ lebel #cancel{
+        display: block;
+    }
+}
+.text{
+    display:block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    margin: 0;
+    background-color: #6f5499;;
+  }
+  h1{
+      font-size: 35px;
+      color:white;
+      font-weight: normal;
+      line-height: initial;
+}
+.text-center{
+    text-align: center;
+    color:black;
+    font-size: 30px;
+    font-family: sans-serif;
+    padding-top: 30px;
+}
+.grid{
+    margin:80px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:30px;
+    align-items: center;    
+}
+.grid>article{
+    background: white;
+    border:none;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    text-align: center;
+    width:250px;
+    transition: transform .3s;     
+}
+.grid>article:hover{
+    transform: translate(5px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+}
+.grid>article img{
+    width:100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;    
+}
+.text{
+    padding: 0 20px 20px ;
+}
+.text button{
+    background: white;
+    border-radius: 5px;
+    border:none;
+    color:white;
+    padding: 10px;
+    width:100%;
+    font-weight: 600;
+    cursor:pointer;
+}
+.grid>article button{
+    float: left;
+}
+.container .grid button{
+    cursor: pointer;
+}
+@media(max-width: 786px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);        
+    }
+}
+@media(max-width:500px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);        
+    }
+    
+}
+.grid>article{
+    text-align: center;
+}
+
+  
+
